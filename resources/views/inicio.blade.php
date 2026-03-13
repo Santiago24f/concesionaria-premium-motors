@@ -15,17 +15,31 @@ font-family:Arial, Helvetica, sans-serif;
 color:white;
 }
 
-/* fondo con imagen */
+/* fondo con video */
 .hero{
+position:relative;
 height:100vh;
-background-image:
-url("/imagen/Audi-RS-6-Avant.jpg");
-background-size:cover;
-background-position:center;
+overflow:hidden;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+color:white;
+}
+
+.video-fondo{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+.video-fondo iframe{
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
 /* secciones */
@@ -90,7 +104,18 @@ text-align:center;
 
 <section class="hero">
 
-<div class="container">
+<div class="video-fondo">
+
+<iframe
+src="https://www.youtube.com/embed/YAFUyPp_238?autoplay=1&mute=1&controls=0&loop=1&playlist=YAFUyPp_238"
+frameborder="0"
+allow="autoplay; fullscreen"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="container contenido">
 
 <h1 class="display-3 fw-bold">Bienvenido a Premium Motors</h1>
 
@@ -100,27 +125,7 @@ En nuestra concesionaria encontrarás tecnología, potencia y elegancia
 en cada vehículo.
 </p>
 
-<li class="nav-item">
 <a class="btn btn-success btn-lg mt-4" href="/menu">Ver vehículos</a>
-</li>
-
-</div>
-
-</section>
-
-
-<section class="section text-center">
-
-<div class="container">
-
-<h2>Nuestra Empresa</h2>
-
-<p class="mt-3">
-Premium Motors es una concesionaria especializada en la venta de
-vehículos nuevos y seminuevos de las mejores marcas del mercado.
-Nuestro objetivo es ofrecer calidad, confianza y una experiencia
-única para cada cliente que busca su automóvil ideal.
-</p>
 
 </div>
 
